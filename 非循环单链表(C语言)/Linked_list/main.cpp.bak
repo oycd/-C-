@@ -148,12 +148,12 @@ bool insert_list(PNODE pHead ,int pos,int val)
 {
    int i = 0;
    PNODE p = pHead;
-   while (NULL!=p && i<pos-1)//先推出删除结点前一个元素
+   while (NULL!=p && i<pos-1)
    {
        p = p->pNext;
        ++i;
    }
-   if(i>pos-1 || NULL==p)//i>pos-1作用是排除负数；NULL==p排除结点为空;
+   if(i>pos-1 || NULL==p)
     return false;
    PNODE pNew = (PNODE)malloc(sizeof(NODE));
    if(NULL == pNew)
